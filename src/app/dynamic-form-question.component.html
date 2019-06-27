@@ -1,0 +1,17 @@
+<div [formGroup]="form">
+  <label [attr.for]="question.id">{{question.description}}</label>
+
+  <div [ngSwitch]="question.fieldType === 'NUMERIC'">
+
+    <input [formControlName]="question.id"
+            [id]="question.id" type="number">
+
+  </div>
+
+    <!-- <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
+      <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+    </select> -->
+
+
+  <!-- <div class="errorMessage" *ngIf="!isValid">{{question.description}} is required</div> -->
+</div>
