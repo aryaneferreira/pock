@@ -7,6 +7,12 @@ import { DynamicFormComponent } from './dynamic-form.component';
 import { DynamicFormQuestionComponent } from './dynamic-form-question.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { QuestionGateway } from './question.gateway';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { CommonModule } from '@angular/common';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,9 +21,15 @@ import { QuestionGateway } from './question.gateway';
     DynamicFormQuestionComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatExpansionModule,
+    NoopAnimationsModule,
   ],
   providers: [
     QuestionControlGateway,

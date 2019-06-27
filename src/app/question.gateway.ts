@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Question } from './question';
+import { Question, FieldType } from './question';
 
 @Injectable()
 export class QuestionGateway {
@@ -9,19 +9,31 @@ export class QuestionGateway {
       new Question({
         id: '263-7',
         description: 'CREATININA FORMULA',
-        fieldType: 'NUMERIC',
+        fieldType: FieldType.numericWithDefaultAnswer,
         order: 7
       }),
       new Question({
         id: '263-16',
         description: 'BILIRRUBINA TOTAL',
-        fieldType: 'NUMERIC',
+        fieldType: FieldType.numeric,
         order: 16
       }),
       new Question({
         id: '263-25',
         description: 'INR (TP)',
-        fieldType: 'NUMERIC',
+        fieldType: FieldType.numeric,
+        order: 25
+      }),
+      new Question({
+        id: '1-1',
+        description: 'TEMPERATURA( RETAL C )',
+        fieldType: FieldType.defaultAnswers,
+        order: 25
+      }),
+      new Question({
+        id: '1-28',
+        description: 'ABERTURA OCULAR',
+        fieldType: FieldType.defaultAnswers,
         order: 25
       }),
     ];
