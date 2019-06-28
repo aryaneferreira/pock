@@ -1,11 +1,5 @@
 <div class="div-form-style" [formGroup]="form">
 
-  <!-- <div *ngIf="question.fieldType === 'NUMERIC'">
-    <label>{{question.description}}</label>
-
-    <input [formControlName]="question.id"
-            [id]="question.id" type="number">
-  </div> -->
   <div class="div-style">
   <mat-form-field *ngIf="question.fieldType === 'NUMERIC'">
     <input matInput placeholder="{{question.description}}" [formControlName]="question.id"

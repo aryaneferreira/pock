@@ -5,7 +5,8 @@ import { QuestionControlGateway } from './question-control.gateway';
 
 @Component({
   selector: 'app-dynamic-form',
-  templateUrl: './dynamic-form.component.html'
+  templateUrl: './dynamic-form.component.html',
+  styleUrls: ['./dynamic-form.component.scss']
 })
 export class DynamicFormComponent implements OnInit {
   @Input() questions: Question[];
@@ -16,12 +17,6 @@ export class DynamicFormComponent implements OnInit {
   ) {}
   ngOnInit() {
     this.form = this.gateway.toFormGroup(this.questions);
-    console.log(this.form);
-
-    this.form.valueChanges
-    .subscribe(() => {
-      console.log(this.form);
-    });
   }
   onSubmit() {
     this.payLoad = JSON.stringify(this.form.value);

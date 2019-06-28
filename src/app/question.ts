@@ -12,6 +12,9 @@ export class Question {
   fieldType: FieldType;
   minimumValue: number;
   maximumValue: number;
+
+  // exemplo
+  value: number;
   constructor(init?: Partial<Question>) {
     Object.assign(this, init);
   }

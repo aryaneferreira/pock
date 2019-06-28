@@ -28,13 +28,13 @@ export class QuestionGateway {
         id: '1-1',
         description: 'TEMPERATURA( RETAL C )',
         fieldType: FieldType.defaultAnswers,
-        order: 25
+        order: 1
       }),
       new Question({
         id: '1-28',
         description: 'ABERTURA OCULAR',
         fieldType: FieldType.defaultAnswers,
-        order: 25
+        order: 28
       }),
     ];
     return questions;
