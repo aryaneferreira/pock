@@ -1,1 +1,11 @@
+@import '~@angular/material/theming';
 
+.alternate-toolbar {
+  $alternate-toolbar-primary: mat-palette($mat-purple);
+  $alternate-toolbar-accent: mat-palette($mat-indigo);
+  $alternate-toolbar-warn: mat-palette($mat-pink);
+
+  $alternate-toolbar-theme: mat-light-theme($alternate-toolbar-primary, $alternate-toolbar-accent, $alternate-toolbar-warn);
+
+  @include angular-material-theme($alternate-toolbar-theme);
+}

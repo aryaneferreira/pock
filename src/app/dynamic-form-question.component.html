@@ -1,38 +1,5 @@
-<div class="div-form-style" [formGroup]="form">
+<div class="div-form-style">
 
-  <div class="div-style">
-  <mat-form-field *ngIf="question.fieldType === 'NUMERIC'">
-    <input matInput placeholder="{{question.description}}" [formControlName]="question.id"
-              [id]="question.id" type="number">
-  </mat-form-field>
 
-  <mat-form-field *ngIf="question.fieldType === 'DEFAULT_ANSWERS'">
-      <mat-label>{{question.description}}</mat-label>
-      <mat-select>
-        <mat-option value="Item 1">
-          Item 1
-        </mat-option>
-        <mat-option value="Item 2">
-          Item 2
-        </mat-option>
-        <mat-option value="Item 3">
-          Item 3
-        </mat-option>
-      </mat-select>
-  </mat-form-field>
-  </div>
 
-  <mat-accordion *ngIf="question.fieldType === 'NUMERIC_WITH_DEFAULT_ANSWER'">
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <div>
-        <mat-form-field>
-          <!-- <label>{{question.description}}</label> -->
-          <input matInput placeholder="{{question.description}}" [formControlName]="question.id"
-          [id]="question.id" type="number" (click)="$event.stopPropagation();">
-        </mat-form-field>
-        </div>
-      </mat-expansion-panel-header>
-    </mat-expansion-panel>
-  </mat-accordion>
 </div>
