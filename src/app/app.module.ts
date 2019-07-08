@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     CommonModule,
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
     FormsModule,

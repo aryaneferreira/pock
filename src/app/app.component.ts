@@ -11,8 +11,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
-  theme = false;
   questions: Question[];
 
   themeControl = new FormControl('light-blue');
@@ -34,7 +32,4 @@ export class AppComponent implements OnInit {
     });
   }
 
-  isAlternateMode() {
-    this.theme = !this.theme;
-  }
 }
